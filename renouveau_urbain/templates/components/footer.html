@@ -1,50 +1,50 @@
-<footer class="bg-dark text-white py-5 mt-5">
-      <div class="container w-75">
+<footer class="bg-black text-white py-5 mt-5">
+      <div class="container p-5">
             <div class="row">
                   <div class="col-md-5">
-                        <a href="{% url 'home' %}" class='navbar-brand d-flex  align-items-center fs-5 h5'>
-                              <i class="bi bi-megaphone me-3 fs-1"></i> Renouveau Urbain</a>
-                        <p class="small">
+                        <a href="{% url 'home' %}" class='navbar-brand d-flex  align-items-center mb-1 fs-5 display-6'>
+                              <i class="bi bi-megaphone me-3 fs-2"></i> Renouveau urbain</a>
+                        <p>
                               Ensemble, luttons contre l'insalubrité et construisons un avenir plus propre en République
-                              Démocratique du Congo.
+                              Démocratique du Congo. Chaque geste compte : adoptons des pratiques écologiques, recyclons
+                              nos déchets et sensibilisons nos communautés à l'importance d'un environnement sain.
+                              Ensemble, faisons de nos villes des espaces de vie plus agréables et durables pour les
+                              générations futures.
                         </p>
-                        {% if request.user.is_authenticated %}
-                        <a class="btn btn-outline-success mb-3" href="{% url "logout" %}">Déconnexion</a>
-                        {% else %}
-                        <a class="btn btn-outline-success mb-3" href="{% url 'signin' %}">Se connecter</a>
-                        {% endif %}
-                        <div>
-                              <a href="#" class='text-decoration-none text-white'>
-                                    <i class="bi bi-arrow-up-circle fs-3"></i>
-                              </a>
-                        </div>
                   </div>
                   <div class="col-md-4">
-                        <h5 class="fs-5">Liens rapides</h5>
+                        <p class='fs-5 display-6'>Liens rapides</p>
                         <ul class="list-unstyled">
                               <li><a href="{% url "home" %}" class="text-white text-decoration-none">Home</a></li>
-                              <li><a href="{% url "about" %}" class="text-white text-decoration-none">Qui sommes nous ?</a></li>
+                              <li><a href="{% url "about" %}" class="text-white text-decoration-none">Qui sommes nous
+                                          ?</a></li>
                               <li><a href="{% url 'blog' %}" class="text-white text-decoration-none">Blog</a></li>
                               <li><a href="{% url 'contact' %}" class="text-white text-decoration-none">Contact</a></li>
                               {% if request.user.is_authenticated %}
-                              <li><a href="{% url 'admin_panel' %}" class="text-white text-decoration-none">Article</a></li>
+                              <li><a href="{% url 'admin_panel' %}" class="text-white text-decoration-none">Article</a>
+                              </li>
                               {% endif %}
                         </ul>
                   </div>
                   <div class="col-md-3">
-                        <h5 class="fs-5">Contact</h5>
-                        <p class="mb-2 small"><i class="bi bi-envelope-fill"></i> contact@renouveau-urbain.org</p>
-                        <p class="small"><i class="bi bi-telephone-fill"></i> +243 999 549 703</p>
+                        <p class='fs-5 display-6'>Contactez-nous</p>
+                        <p class='mb-1'><i class="bi bi-envelope-open fs-6"></i> contact@renouveau-urbain.org</p>
+                        <p><i class="bi bi-phone fs-6"></i> +243 999 549 703</p>
                         <div>
                               <a href="#" class="text-white me-2"><i class="bi bi-facebook fs-5"></i></a>
                               <a href="#" class="text-white me-2"><i class="bi bi-twitter-x fs-5"></i></a>
                               <a href="#" class="text-white me-2"><i class="bi bi-instagram fs-5"></i></a>
                               <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
                         </div>
+                        {% if request.user.is_authenticated %}
+                        <a class="btn btn-outline-success my-3" href="{% url "logout" %}">Déconnexion</a>
+                        {% else %}
+                        <a class="btn btn-outline-success my-3" href="{% url 'signin' %}">Se connecter</a>
+                        {% endif %}
                   </div>
             </div>
             <div class="text-center mt-3">
-                  <p class="small mb-0">&copy; 2025 Renouveau Urbain - Tous droits réservés.</p>
+                  <p class="mb-0">&copy; 2025 Renouveau Urbain - Tous droits réservés.</p>
             </div>
       </div>
 </footer>

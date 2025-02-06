@@ -7,7 +7,7 @@
 }
 
 .header-home {
-  background: linear-gradient(rgba(0, 67, 21, 0.5), rgba(2, 40, 20, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(1, 7, 4, 0.5)),
     url('../images/img1.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 }
 
 .why-bg {
-  background: linear-gradient(rgba(0, 67, 21, 0.5), rgba(2, 40, 20, 0.5)),
+  background: linear-gradient(rgb(2, 30, 16, 0.6), rgba(0, 0, 0, 0.6)),
     url('../images/img2.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
 
 .background-clip-section {
   position: relative;
-  background: linear-gradient(rgb(10, 83, 34), #00775D);
+  background: linear-gradient(rgb(47, 155, 83), #00775D);
   clip-path: polygon(100% 10%, 100% 11%, 100% 100%, 0 100%, 0 4%);
   overflow: hidden;
   padding-top: 70px;
@@ -89,5 +89,5 @@
 }
 
 .bg-img-detail{
-  height: 300px !important;
+  height: 230px !important;
 }
