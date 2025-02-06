@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block base %}
+{% include "components/navbar.html" %}
+<header class="header-home d-flex justify-content-center align-items-center text-white mt-2 rounded-top-3">
+      <div class="container">
+            <p class='fs-1 text-center fw-medium' data-aos="zoom-in" data-aos-duration="1000">Unissons-nous pour un
+                  avenir plus propre ! 🌍</p>
+            <p class='text-center fs-5' data-aos="zoom-in" data-aos-duration="1500">Rejoignez Renouveau Urbain et <br />
+                  agissons ensemble contre l'insalubrité en RDC.
+            </p>
+            <div class="d-flex justify-content-center gap-3 mt-3">
+                  <a href="{% url 'about' %}" class='btn btn-success'>Contatez-nous</a>
+            </div>
+      </div>
+</header>
+<section>
+      <div class="container p-5">
+            <div class="row gy-3">
+                  <div class="col-md-6 why-bg" data-aos="fade-right" data-aos-anchor="#example-anchor"
+                        data-aos-offset="500" data-aos-duration="500">
+                  </div>
+                  <div class="col-md-6 px-lg-5" data-aos="zoom-in" data-aos-duration="500">
+                        <p class="fs-3 display-1">Pourquoi Renouveau Urbain ?</p>
+
+                        <p> En RDC, la gestion des déchets est un défi critique, avec 10 000 tonnes produites chaque
+                              jour à
+                              Kinshasa et un faible taux de collecte. Cette situation nuit à l’environnement et à la
+                              santé
+                              publique.</p>
+                        <p> Renouveau Urbain agit pour un changement durable en promouvant le recyclage, la
+                              sensibilisation
+                              et des solutions adaptées. En impliquant citoyens, autorités et entreprises, nous œuvrons
+                              pour
+                              des villes plus propres et un cadre de vie sain.</p>
+                  </div>
+            </div>
+      </div>
+</section>
+<section class='background-clip-section d-flex justify-content-center align-items-center'>
+      <div class="container p-5">
+            <p class="display-6 text-center">Nos actions</p>
+            <p class="fs-6 text-center">
+                  Découvrez les actions en cours et à venir de Renouveau Urbain pour améliorer l'environnement en <br>
+                  République Démocratique du Congo.
+            </p>
+            <div class="row gy-3 justify-content-center align-items-stretch">
+                  <div class="col-md-4 d-flex" data-aos="zoom-in" data-aos-duration="500">
+                        <div class="card border-0 shadow-sm p-4 text-center d-flex flex-column h-100">
+                              <i class="bi bi-building display-4 text-primary"></i>
+                              <h5 class="mt-3">Action 1: Promouvoir le recyclage des matériaux</h5>
+                              <p class="text-muted flex-grow-1">
+                                    Renouveau Urbain organise des campagnes de collecte de déchets recyclables dans les
+                                    quartiers de Kinshasa afin de les transformer en matériaux réutilisables pour la
+                                    construction et d'autres usages écologiques.
+                              </p>
+                        </div>
+                  </div>
+                  <div class="col-md-4 d-flex" data-aos="zoom-in" data-aos-duration="700">
+                        <div class="card border-0 shadow-sm p-4 text-center d-flex flex-column h-100">
+                              <i class="bi bi-house-door display-4 text-success"></i>
+                              <h5 class="mt-3">Action 2: Sensibilisation à la construction écologique</h5>
+                              <p class="text-muted flex-grow-1">
+                                    Nous formons les communautés locales à l'utilisation de matériaux écologiques et à
+                                    la construction de bâtiments durables en mettant en avant des techniques
+                                    respectueuses de l'environnement et une gestion de l'eau efficace.
+                              </p>
+                        </div>
+                  </div>
+                  <div class="col-md-4 d-flex" data-aos="zoom-in" data-aos-duration="900">
+                        <div class="card border-0 shadow-sm p-4 text-center d-flex flex-column h-100">
+                              <i class="bi bi-globe display-4 text-warning"></i>
+                              <h5 class="mt-3">Action 3: Promouvoir les bonnes pratiques environnementales</h5>
+                              <p class="text-muted flex-grow-1">
+                                    À travers des ateliers et des événements, Renouveau Urbain encourage les citoyens à
+                                    adopter des pratiques respectueuses de l'environnement, comme la réduction des
+                                    déchets et l'utilisation durable des ressources naturelles.
+                              </p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</section>
+<section class="mt-5">
+      <div class="container">
+            <div class="row py-3 justify-content-center g-1 bg-body-tertiary active rounded-3 text-center" id="stats">
+                  <div class="col-md-3">
+                        <h4 class="display-6 fw-bold" data-count="52">0</h4>
+                        <p class="fs-6">Tonnes de déchets recyclés</p>
+                  </div>
+                  <div class="col-md-3">
+                        <h2 class="display-5 fw-bold" data-count="21">0</h2>
+                        <p class="fs-6">Arbres plantés</p>
+                  </div>
+                  <div class="col-md-3">
+                        <h2 class="display-5 fw-bold" data-count="18">0</h2>
+                        <p class="fs-6">Événements organisés</p>
+                  </div>
+                  <div class="col-md-3">
+                        <h2 class="display-5 fw-bold" data-count="2000">0</h2>
+                        <p class="fs-6">Personnes sensibilisées</p>
+                  </div>
+            </div>
+      </div>
+</section>
+{% load static %}
+
+{% if recent_articles %}
+<section class='mt-5'>
+      <div class="container">
+            <p class="display-6 text-center">Nos actualités</p>
+            <p class="fs-6 text-center">
+                  Découvrez les dernières actualités et initiatives de Renouveau Urbain pour améliorer l'environnement
+                  <br />
+                  en République Démocratique du Congo.
+            </p>
+            <div class="container mt-5">
+                  <div class="row g-4 gy-5 justify-content-center">
+                        {% for article in recent_articles %}
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                              <div class="card border-0 shadow-sm h-100">
+                                    {% if article.image %}
+                                    <img src="{{ article.image.url }}" class="card-img-top img-fluid"
+                                          alt="{{ article.title }}">
+                                    {% endif %}
+                                    <div class="card-body d-flex flex-column">
+                                          <div class="d-flex align-items-center text-muted mb-2">
+                                                <i class="bi bi-calendar-event me-2"></i>
+                                                <small>{{ article.publication_date|date:"d F Y" }}</small>
+                                          </div>
+                                          <h6 class="card-title">{{ article.title }}</h6>
+                                          <p class="card-text text-muted flex-grow-1 text-truncate">
+                                                {{ article.description|truncatewords:20 }}
+                                          </p>
+                                          <a href="{% url 'article_detail' article.slug %}"
+                                                class="btn btn-outline-success mt-auto">Lire plus</a>
+                                    </div>
+                              </div>
+                        </div>
+                        {% endfor %}
+                  </div>
+            </div>
+      </div>
+</section>
+{% endif %}
+
+{% include "components/footer.html" %}
+{% endblock base %}

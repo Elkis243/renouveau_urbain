@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block base %}
+<div class="bg-login d-flex justify-content-center align-items-center py-5">
+      <div class="card shadow p-4 rounded-3 d-flex justify-content-center" style="width: 400px; height: auto;">
+            <a href="{% url 'home' %}" class='navbar-brand d-flex justify-content-center align-items-center fs-5 mb-5'>
+                  <i class="bi bi-megaphone fs-2 me-3"></i> Renouveau Urbain</a>
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert fs-6  text-center {{message.tags}} return-messag" id='alert'>{{message}}</div>
+            {% endfor %}
+            {% endif %}
+            <form class="d-flex flex-column h-100 needs-validation" action="{% url 'signin' %}" method="post" novalidate
+                  id="login_form">
+                  {% csrf_token %}
+                  <div class="mb-3">
+                        <label for="email" class="form-label">Vote adresse e-mail</label>
+                        <input type="email" class="form-control" id="Email" name="email"
+                              placeholder="Votre adresse e-mail"
+                              pattern="[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[a-zA-Z]{2,5}"
+                              required />
+                        <div class="invalid-feedback">Email requis !</div>
+                  </div>
+                  <div class="mb-3">
+                        <label for="password" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="Mot de passe"
+                              placeholder="Entrez votre mot de passe" name="password" required>
+                        <div class="invalid-feedback">Mot de passe requis !</div>
+                  </div>
+                  <p class="mb-4">
+                        <a href="#" class="text-decoration-none text-dark"><i class="bi bi-lock-fill fs-4"></i>Mot de
+                              passe
+                              oublié ?</a>
+                  </p>
+                  <div class="d-grid">
+                        <button type="submit" class="btn btn-success">Se connecter</button>
+                  </div>
+            </form>
+            <p class="text-center mt-3">
+                  <a href="{% url 'home' %}" class="text-decoration-none text-dark"><i
+                              class="bi bi-house-door-fill fs-5"></i>
+                        Retour à l'accueil</a>
+            </p>
+      </div>
+</div>
+{% endblock base %}

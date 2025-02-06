@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  font-family: "Outfit", serif;
+  font-size: 14px;
+  letter-spacing: .2px;
+}
+
+.header-home {
+  background: linear-gradient(rgba(0, 67, 21, 0.5), rgba(2, 40, 20, 0.5)),
+    url('../images/img1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 87%, 0% 50%);
+}
+
+.why-bg {
+  background: linear-gradient(rgba(0, 67, 21, 0.5), rgba(2, 40, 20, 0.5)),
+    url('../images/img2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 220px;
+}
+
+.background-clip-section {
+  position: relative;
+  background: linear-gradient(rgb(10, 83, 34), #00775D);
+  clip-path: polygon(100% 10%, 100% 11%, 100% 100%, 0 100%, 0 4%);
+  overflow: hidden;
+  padding-top: 70px;
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.background-clip-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.header-about {
+  background: linear-gradient(rgb(10, 83, 34), rgba(9, 198, 97, 0.86));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 87%, 0% 50%);
+}
+
+.about-bg {
+  background: linear-gradient(rgba(0, 67, 21, 0.5), rgba(2, 40, 20, 0.5)),
+    url('../images/img4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+.bg-login{
+ background-image: url('../images/img5.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-img-detail{
+  height: 300px !important;
+}

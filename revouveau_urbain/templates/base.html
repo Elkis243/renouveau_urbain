@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renouveau Urbain</title>
+
+  <link rel="stylesheet" href="{% static 'style/bootstrap-min.css' %}" />
+  <link rel="stylesheet" href="{% static 'style/bootstrap-icons.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'style/index.css' %}" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+  {% block base %}
+  {% endblock base %}
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/counter.js' %}"></script>
+  <script src="{% static 'js/contact.js' %}"></script>
+  <script src="{% static 'js/login.js' %}"></script>
+
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

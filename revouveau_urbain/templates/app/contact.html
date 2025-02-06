@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block base %}
+{% include "components/navbar.html" %}
+
+<header class="header-about d-flex justify-content-center align-items-center text-white mt-2 rounded-top-3">
+      <div class="container">
+            <p class='fs-1 text-center fw-medium' data-aos="zoom-in" data-aos-duration="1000"># Contactez-nous !</p>
+      </div>
+</header>
+<section class='mt-5'>
+      <div class="container p-5">
+            <div class="row">
+                  <div class="col-md-6">
+                        <P class='fs-5 fw-semibold'> Vous avez des questions ? <br />
+                              Contactez-nous !</P>
+                        <p class='text-muted'>
+                              Vous souhaitez en savoir plus sur nos actions ou collaborer avec nous ?
+                              Notre équipe est à votre disposition pour répondre à toutes vos questions et vous
+                              accompagner dans vos démarches.
+
+                              N’hésitez pas à nous contacter pour toute information ou suggestion. Ensemble,
+                              construisons un avenir plus propre et durable !
+                        </p>
+                  </div>
+                  <div class="col-md-6">
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert fs-6  text-center {{message.tags}} return-messag" id='alert'>{{message}}</div>
+                        {% endfor %}
+                        {% endif %}
+                        <form action="{% url 'contact' %}" method="post" class="needs-validation" novalidate
+                              id="contact_form">
+                              {% csrf_token %}
+                              <div class="mb-3">
+                                    <label for="email" class="form-label">Vote adresse e-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                          placeholder="Votre adresse e-mail"
+                                          pattern="[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[a-zA-Z]{2,5}"
+                                          required />
+                                    <div class="invalid-feedback">Email requis !</div>
+                              </div>
+                              <div class="mb-3">
+                                    <label for="subject" class="form-label">Objet</label>
+                                    <input type="text" class="form-control" id="subject" name="objet"
+                                          placeholder="Objet de votre message" required minlength="3" maxlength="100" />
+                                    <div class="invalid-feedback"></div>
+                              </div>
+                              <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5"
+                                          placeholder="Votre message" required minlength="10"
+                                          maxlength="700"></textarea>
+                                    <div class="invalid-feedback"></div>
+                              </div>
+                              <button type="submit" class="btn btn-success">Envoyer</button>
+                        </form>
+                  </div>
+            </div>
+      </div>
+</section>
+
+{% include "components/footer.html" %}
+{% endblock base %}

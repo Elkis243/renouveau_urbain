@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block base %}
+{% include "components/navbar.html" %}
+<header class="header-about d-flex justify-content-center align-items-center text-white mt-2 rounded-top-3">
+      <div class="container">
+            <p class='fs-1 text-center fw-medium' data-aos="zoom-in" data-aos-duration="1000"># Article</p>
+      </div>
+</header>
+<section class='py-5'>
+      <div class="container">
+            <div class="row justify-content-center">
+                  <div class="col-md-8">
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert fs-6  text-center {{message.tags}} return-messag" id='alert'>{{message}}</div>
+                        {% endfor %}
+                        {% endif %}
+                        <form method="POST" action="" enctype="multipart/form-data" class="needs-validation" novalidate
+                              id="contact_form">
+                              {% csrf_token %}
+                              <div class="mb-3">
+                                    <label for="Titre" class="form-label">Titre de l'article</label>
+                                    <input type="text" class="form-control" id="Titre" name="title" required
+                                          minlength="15" maxlength="300">
+                                    <div class="invalid-feedback">Titre requis !</div>
+                              </div>
+                              <div class="mb-3">
+                                    <label for="Contenu" class="form-label">Contenu</label>
+                                    <textarea class="form-control" id="Contenu" name="content" rows="6" required
+                                          minlength="500"></textarea>
+                                    <div class="invalid-feedback">Contenu requis !</div>
+                              </div>
+                              <div class="mb-3">
+                                    <label for="image" class="form-label">Image</label>
+                                    <input type="file" class="form-control" id="image" name="image" accept="image/*"
+                                          required>
+                                    <div class="invalid-feedback">Image requis !</div>
+                              </div>
+                              <button type="submit" class="btn btn-outline-success">Enregistrer</button>
+                        </form>
+                  </div>
+            </div>
+      </div>
+</section>
+
+{% include "components/footer.html" %}
+{% endblock base %}

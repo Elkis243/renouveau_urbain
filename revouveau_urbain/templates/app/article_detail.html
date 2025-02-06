@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% load social_share %}
+
+{% block base %}
+{% include "components/navbar.html" %}
+
+<header class="header-about d-flex justify-content-center align-items-center text-white mt-2 rounded-top-3">
+      <div class="container">
+            <p class='fs-1 text-center fw-medium' data-aos="zoom-in" data-aos-duration="1000"># Blog</p>
+      </div>
+</header>
+
+<section class='mt-5'>
+      <div class="container p-5">
+            <div class="row justify-content-center">
+                  <div class="col-md-9">
+                        <img src="{{ article.image.url }}" class="card-img-top img-fluid bg-img-detail mb-3"
+                              alt="{{ article.title }}">
+                        {% if request.user.is_authenticated %}
+                        <div class="d-flex align-items-center gap-2 mb-4">
+                              <i class="bi bi-share-fill me-4" style="font-size: 20px;"></i>
+                              <a href="https://www.linkedin.com/shareArticle?mini=true&url={{object_or_url|urlencode}}"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="bi bi-linkedin" style="font-size: 20px;"></i>
+                              </a>
+                              <a href="https://www.facebook.com/sharer/sharer.php?u={{object_or_url|urlencode}}"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="bi bi-facebook" style="font-size: 20px;"></i>
+                              </a>
+                              <a href="https://twitter.com/intent/tweet?text={{object_or_url|urlencode}}>"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="bi bi-twitter-x" style="font-size: 20px;"></i>
+                              </a>
+                        </div>
+                        {% endif %}
+                        <p class='display-6'>{{article.title}}</p>
+                        <p class=''>{{article.description|linebreaksbr}}</p>
+                  </div>
+            </div>
+      </div>
+</section>
+
+{% include "components/footer.html" %}
+{% endblock base %}

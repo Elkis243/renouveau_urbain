@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block base %}
+{% include "components/navbar.html" %}
+
+<header class="header-about d-flex justify-content-center align-items-center text-white mt-2 rounded-top-3">
+      <div class="container">
+            <p class='fs-1 text-center fw-medium' data-aos="zoom-in" data-aos-duration="1000"># Qui sommes nous ?</p>
+      </div>
+</header>
+<section class='mt-5'>
+      <div class="container p-5">
+            <div class="row">
+                  <div class="col-md-6 about-bg"></div>
+                  <div class="col-md-6 px-md-5">
+                        <p class='fs-5 display-6 fw-semibold'>
+                              Nous sommes une organisation non gouvernementale engagée dans la lutte contre
+                              l'insalubrité
+                              et la protection de l'environnement en République Démocratique du Congo.
+                        </p>
+                        <p>
+                              Fondée dans un contexte de défis environnementaux croissants, Renouveau Urbain est née
+                              d’une volonté citoyenne de transformer les quartiers insalubres en espaces sains et
+                              durables.
+                              Face à l’accumulation des déchets, à la pollution et à la déforestation, nous avons décidé
+                              d’agir
+                              en mobilisant les communautés et en mettant en place des initiatives concrètes pour
+                              l’assainissement
+                              et la gestion responsable des déchets.
+                        </p>
+                        <p>
+                              Notre mission principale est de sensibiliser la population aux enjeux environnementaux,
+                              d'encourager des pratiques écologiques et d’initier des projets de revalorisation des
+                              déchets.
+                              Nous collaborons avec des écoles, des entreprises et des autorités locales pour promouvoir
+                              une culture du recyclage et de la préservation de la biodiversité urbaine.
+                        </p>
+                        <p>
+                              Parmi nos actions phares, nous organisons des campagnes de nettoyage, des ateliers de
+                              formation
+                              sur le compostage et le tri sélectif, ainsi que des projets de reboisement pour lutter
+                              contre
+                              la déforestation. Grâce à l'implication des citoyens et des partenaires, nous avons déjà
+                              réussi
+                              à recycler plusieurs tonnes de déchets et à planter des centaines d'arbres dans
+                              différentes villes.
+                        </p>
+                        <p>
+                              Notre ambition est de bâtir un avenir où chaque Congolais adopte un mode de vie
+                              respectueux de
+                              l’environnement, en faisant de nos villes des modèles d’écologie et de durabilité pour
+                              l’Afrique.
+                        </p>
+                  </div>
+            </div>
+      </div>
+</section>
+<section class='mt-5'>
+      <div class="container p-5 w-75">
+            <div class="row gy-4 align-items-start">
+                  <div class="col-md-4 d-flex align-items-start">
+                        <div class="d-flex justify-content-center align-items-center 
+                                    bg-success text-white rounded-circle flex-shrink-0"
+                              style="width: 50px; height: 50px; font-size: 1.2rem; font-weight: bold;">
+                              01
+                        </div>
+                        <div class="ms-3">
+                              <p class='fs-5 display-5 fw-semibold mb-1'>Notre mission</p>
+                              <p class='text-muted'>Nous œuvrons pour un environnement plus propre en luttant contre l'insalubrité, 
+                                    en encourageant le recyclage et en sensibilisant les communautés à la gestion durable 
+                                    des déchets.</p>
+                        </div>
+                  </div>
+                  <div class="col-md-4 d-flex align-items-start">
+                        <div class="d-flex justify-content-center align-items-center 
+                                    bg-success text-white rounded-circle flex-shrink-0"
+                              style="width: 50px; height: 50px; font-size: 1.2rem; font-weight: bold;">
+                              02
+                        </div>
+                        <div class="ms-3">
+                              <p class='fs-5 display-5 fw-semibold mb-1'>Notre vision</p>
+                              <p class='text-muted'>Créer un avenir où chaque citoyen adopte des pratiques écoresponsables, 
+                                    où les déchets deviennent des ressources et où les espaces urbains 
+                                    sont propres et durables.</p>
+                        </div>
+                  </div>
+                  <div class="col-md-4 d-flex align-items-start">
+                        <div class="d-flex justify-content-center align-items-center 
+                                    bg-success text-white rounded-circle flex-shrink-0"
+                              style="width: 50px; height: 50px; font-size: 1.2rem; font-weight: bold;">
+                              03
+                        </div>
+                        <div class="ms-3">
+                              <p class='fs-5 display-5 fw-semibold mb-1'>Nos valeurs</p>
+                              <p class='text-muted'>Engagement, responsabilité, solidarité et innovation guident nos actions 
+                                    pour un impact positif et durable sur l’environnement et la société.</p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</section>
+
+
+
+{% include "components/footer.html" %}
+{% endblock base %}
