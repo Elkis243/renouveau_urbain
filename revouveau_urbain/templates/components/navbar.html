@@ -34,9 +34,9 @@
                               {% endif %}
                               <li class="nav-item">
                                     {% if request.user.is_authenticated %}
-                                    <a class="btn btn-outline-success" href="{% url "logout" %}">Se déconnecter</a>
+                                    <a class="btn btn-outline-success" href="{% url "logout" %}">Déconnexion</a>
                                     {% else %}
-                                    <a class="btn btn-outline-success" href="{% url 'signin' %}">Se connecter</a>
+                                    <a class="btn btn-outline-success" href="{% url 'signin' %}">Connexion</a>
                                     {% endif %}
                               </li>
                         </ul>
