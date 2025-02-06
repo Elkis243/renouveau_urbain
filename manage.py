@@ -2,16 +2,16 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from revouveau_urbain.settings import base
+from renouveau_urbain.settings import base
 
 
 def main():
     """Run administrative tasks."""
 
     if base.DEBUG:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'revouveau_urbain.settings.local')
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'renouveau_urbain.settings.local')
     else:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'revouveau_urbain.settings.production')
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'renouveau_urbain.settings.production')
 
     try:
         from django.core.management import execute_from_command_line
